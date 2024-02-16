@@ -32,6 +32,12 @@ async function main(){
 main()
 
 
+// //base route
+// app.use("/",(req,res)=>{
+//     res.send("hello world from movies")
+// })
+
+
 //Get all movies
 app.get("/movies", async (req,res)=>{
     try {
@@ -41,6 +47,7 @@ app.get("/movies", async (req,res)=>{
         res.status(500).json({ message: error });
     }
 })
+
 
 //Post a movie
 app.post("/movies", async (req,res) => {
@@ -114,12 +121,6 @@ app.post("/login",async (req,res)=>{
     })
 
 })
-
-//base route
-app.use("/",(req,res)=>{
-    res.send("hello world from movies")
-})
-
 
 
 
