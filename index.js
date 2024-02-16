@@ -1,6 +1,6 @@
 const express = require("express")
 const mongoose = require("mongoose");
-const SECRET_KEY = process.env.SECRET_KEY || "afkdhkcxjvndbdnfc"
+const SECRET_KEY = "afkdhkcxjvndbdnfc"
 const MONGODB = "mongodb+srv://vipulgirhe:vipulgirhe@cluster0.ax4dqic.mongodb.net/movies-app"
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
@@ -10,7 +10,7 @@ const User = require("./models/user");
 const Movies = require("./models/movie");
 
 require('dotenv').config()
-const PORT = process.env.PORT || 8080
+const PORT = 8000
 const app = express();
 
 //middlewares
@@ -32,10 +32,10 @@ async function main(){
 main()
 
 
-// //base route
-// app.use("/",(req,res)=>{
-//     res.send("hello world from movies")
-// })
+//base route
+app.use("/",(req,res)=>{
+    res.send("hello world from movies")
+})
 
 
 //Get all movies
