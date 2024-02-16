@@ -33,9 +33,9 @@ main()
 
 
 //base route
-app.use("/",(req,res)=>{
-    res.send("hello world from movies")
-})
+app.get("/", (req, res) => {
+    res.send("hello world from movies");
+});
 
 
 //Get all movies
@@ -125,5 +125,5 @@ app.post("/login",async (req,res)=>{
 
 
 app.listen(8000,()=>{
-    console.log(`Api running on ${PORT}`);
+    console.log(`Api running on 8000`);
 })
